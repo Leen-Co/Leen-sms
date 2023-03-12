@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+ <head>
+     <title>Leen-Co School Managemet System</title>
+     <link rel="shortcut icon" href="Pics/logo.jpg"/>
+     <meta charset="utf-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" minimal-ui/>
+     <meta name="author" content="Salman Aliyu Zarewa"/>
+     <meta name="keywords" content="Leen-Co, Kano Devs, Kano Developers, Salmanu Zarewa, Muhammad, Kamal,"/>
+     <meta name="description" content="School Management System"/>
+     
+     <link rel="stylesheet" href="style.css"/>
+     <link rel="stylesheet" href="media.css"/>
+ </head>
+ <body onload="loadContents();">
+     <header></header>
+    <div class="main">
+     <div class="container">
+        <div class="left-col">
+            <div class="logoImg">
+                <img alt="Leen-Co" src="Pics/logo.jpg"/>
+            </div>
+            <!--<div class="header">
+                <h1>Leen-Co</h1>
+                <p><em>...School Management System.</em></p>
+            </div>-->
+        </div>
+        <div class="right-col">
+            <form class="sign" role="sign" onsubmit="return false;" id="signForm">
+                <h3>Register school with Leen-Co</h3>
+                <hr/>
+                <span id="emailSpan"></span>
+                <input type="email" name="email" class="email" id="email" placeholder="Enter email"/>
+                <hr/>
+                <span id="phoneSpan"></span>
+                <input type="text" name="phone" class="phone" id="phone" placeholder="Enter phone number"/>
+                <hr/>
+                <span id="schNameSpan"></span>
+                <input type="text" name="schName" class="schName" id="schName" placeholder="Enter school name"/>
+                <hr/>
+                <span id="schTypeSpan"></span>
+                <select id="selSchType">
+                    <option value="default">--Select school type--</option>
+                    <option value="college">College</option>
+                    <option value="secondary">Secondary</option>
+                    <option value="primary">Primary</option>
+                </select>
+                <hr/>
+                <span id="passSpan"></span>
+                <input type="password" name="pass" class="pass" id="pass" placeholder="Create login password"/>
+                <hr/>
+                <input type="checkbox" name="check" class="check" id="checkTerms" onchange="ShowRegBtn();" value="Agree with Terms and Conditions"/> Agree with <a href="terms.txt">Terms and Conditions</a>
+                <p style="padding: 0.5em;">Already registered. <a href="#" onclick="ShowLogForm();">Click here to login.</a></p>
+                <hr id="signBtnhr"/>
+                <button class="signBtn" id="signBtn" onclick="RegUser();">Register</button>
+            </form>
+            <form class="login" role="sign" onsubmit="return false;" id="logForm">
+                <h3>Login to School Admin Site</h3>
+                <p style="color: yellow;"><em>...Login with school email or ID</em></p>
+                <hr/>
+                <input type="checkbox" name="logTypeSel" class="check" id="logTypeSel" onchange="ShowIdBox();" value="Log with school ID"/> Log with school ID.
+                <hr/>
+                <span id="logMailSpan"></span>
+                <input type="email" name="logMail" class="email" id="logMail" placeholder="Enter email"/>
+                <hr id="logMailhr"/>
+                <span id="schIdSpan"></span>
+                <input type="text" name="schId" class="schId" id="schId" placeholder="Enter school ID"/>
+                <hr id="sckIdhr"/>
+                <span id="logPassSpan"></span>
+                <input type="password" name="logPass" class="logPass" id="logpass" placeholder="Enter password"/>
+                <hr/>
+                <button class="logBtn" id="logBtn" onclick="logUser();">Login</button>
+            </form>
+        </div>
+     </div>
+        <div class="clear"></div>
+        <hr style="margin-top: 5em"/>
+     <p class="footer" style="font-weight: bold; font-family: cursive; color: #1ca9c9; text-shadow: -0.5px 0 blue;">&copy; Leen-Co <span id="year"></span></p>
+    </div>
+     
+     <script src="script.js">
+        
+     </script>
+ </body>
+</html>

@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+ <head>
+     <title>Leen-Co School Managemet System</title>
+     <link rel="shortcut icon" href="Pics/logo.jpg"/>
+     <meta charset="utf-8"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" minimal-ui/>
+     <meta name="author" content="Salman Aliyu Zarewa"/>
+     <meta name="keywords" content="Leen-Co, Kano Devs, Kano Developers, Salmanu Zarewa, Muhammad, Kamal,"/>
+     <meta name="description" content="School Management System"/>
+     
+     <link rel="stylesheet" href="style.css"/>
+     <link rel="stylesheet" href="media.css"/>
+     
+     <script>
+         var cont = localStorage.getItem("userVar");
+         console.log(cont);
+         //document.getElementById('getSch').innerHTML = "Welcome to " + cont + " Home Page";
+     </script>
+     
+     <noscript>This site is JavaScript powered. Enable Javascript in your browser settings.</noscript>
+ </head>
+ <body>
+     
+        <header>
+            <h1 id="getSch"></h1>
+        </header>
+
+    <div class="main">
+        <div class="container">
+            <div class="home_left-col">
+                <div class="images">
+                    <img src="Pics/" alt="School Image"/>
+                </div>
+                
+                
+            </div>
+            <div class="home_right-col">
+                <div class="ops">
+                    <h3>Manage Operations</h3>
+                    <hr/>
+                    <form role="ops" onsubmit="return false" id="opsForm" class="opsForm">
+                        <p>Select operation</p>
+                        <select id="opsSel">
+                            <option value="default">--Select Action--</option>
+                            <option value="staffs">Manage Staffs</option>
+                            <option value="students">Manage Students</option>
+                        </select>
+                        <hr/>
+                        <button class="opsBtn" id="opsBtn" onclick="SelOps();">Submit</button>
+                    </form>
+                </div>
+                <div class="staffs" id="staffs">
+                    <span class="close" style="float: right; margin: 0.5em;padding: 0.3em; color: red;border: 1px solid gray;border-radius: 50%;" onclick="document.getElementById('staffs').style.display = 'none';">X</span> 
+                    
+                    <h4>Manage Staffs</h4>
+                    <hr/>
+                    <form role="addStaff" id="addStaffForm">
+                        <span class="close" style="float: right; margin: 0.5em;padding: 0.3em; color: red;border: 1px solid gray;border-radius: 50%;" onclick="document.getElementById('addStaffForm').style.display = 'none';">X</span>
+                        <input type="text" id="staffName" name="staffName" placeholder="Name of staff">
+                        <hr/>
+                        <h5>Staff Subject(s)</h5>
+                        <input type="checkbox" id="staffSbj" name="staffSbj" value="A"/> A
+                        <input type="checkbox" id="staffSbj" name="staffSbj" value="B"/> B
+                        <input type="checkbox" id="staffSbj" name="staffSbj" value="C"/> C
+                        <hr/>
+                        <h5>Staff Class(es)</h5>
+                        <input type="checkbox" id="staffClass" name="staffClass" value="A"/> A
+                        <input type="checkbox" id="staffClass" name="staffClass" value="B"/> B
+                        <input type="checkbox" id="staffClass" name="staffClass" value="C"/> C
+                        <hr/>
+                        <button id="regStaff" onclick="RegisterStaff();">Register Staff</button>
+                    </form>
+                    <div class="staff"></div>
+                    <div class="btnGrp">
+                        <button id="addStaffBtn">Add</button>
+                        <button id="editStaffBtn">Edit</button>
+                        <button id="removeStaffBtn">Remove</button>
+                    </div>
+                </div>
+                <div class="students" id="students">
+                    <span class="close" style="float: right; margin: 0.5em;padding: 0.3em; color: red;border: 1px solid gray;border-radius: 50%;" onclick="document.getElementById('students').style.display = 'none';">X</span>
+
+                    <h4>Manage Students</h4>
+                    <hr/>
+                    <form role="addStd" id="addStdForm">
+                        <span class="close" style="float: right; margin: 0.5em;padding: 0.3em; color: red;border: 1px solid gray;border-radius: 50%;" onclick="document.getElementById('addStdForm').style.display = 'none';">X</span>
+                        <input type="text" id="stdName" name="stdName" placeholder="Name of student">
+                        <hr/>
+                        <h5>Staff Subject(s)</h5>
+                        <input type="checkbox" id="staffSbj" name="staffSbj" value="A"/> A
+                        <input type="checkbox" id="staffSbj" name="staffSbj" value="B"/> B
+                        <input type="checkbox" id="staffSbj" name="staffSbj" value="C"/> C
+                        <hr/>
+                        <select name="stdClass" id="stdClass">
+                            <option value="default">--Class of student--</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                        </select>
+                        <hr/>
+                        <label>Student Date of Birth:</label>
+                        <input type="date" name="stdDOB" id="stdDOB" value=""/>
+                        <hr/>
+                        <button id="regStd" onclick="RegisterStd();">Register Student</button>
+                    </form>
+                    <div class="student"></div>
+                    <div class="btnGrp">
+                        <button id="addStdBtn">Add</button>
+                        <button id="editStdBtn">Edit</button>
+                        <button id="removeStdBtn">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        
+        </script>
+        <div class="clear" id="clear"></div>
+        <hr/>
+     <p class="footer" style="font-weight: bold; font-family: cursive; color: #1ca9c9; text-shadow: -0.5px 0 blue;">&copy; Leen-Co <span id="year"></span></p>
+    </div>
+     
+     <script src="script.js">
+        
+     </script>
+ </body>
+</html>
